@@ -1,3 +1,7 @@
+* {
+  color: #614633;
+}
+
 div.middle-container {
   max-width: 1000px;
   margin: 0 auto;
@@ -12,6 +16,8 @@ main div.middle-container {
 
 header {
   background-color: #bb8773;
+  padding-top: 60px;
+  padding-bottom: 10px;
 }
 
 .block-center {
@@ -31,7 +37,7 @@ div.name {
   width: 100%;
   min-width: 220px;
   text-align: center;
-  padding: 14px;
+  padding: 7px;
   margin-top: 20px;
   float: left;
   background-color: white;
@@ -110,19 +116,11 @@ header img {
 }
 
 footer {
-  height: 120px;
   background-color: #353535;
 }
 
 main {
-  height: 800px;
   background-color: Bisque;
-}
-
-div.links.block-center {
-  width: 200px;
-  padding: 0 30px;
-  border-bottom: 1px solid #614633;
 }
 
 ul {
@@ -130,24 +128,31 @@ ul {
   padding: 0;
 }
 
+div.links {
+  width: 250px;
+  padding: 0 30px;
+  border-bottom: 1px solid #614633;
+}
+
 div.links ul {
+  width: 250px;
   display: inline-block;
 }
 
 div.links ul li {
   margin: 0 10px;
-  float: left;
-  display: block;
+  //float: left;
+  display: inline-block;
 }
 
 div.links ul li a {
   color: #7c5030;
 }
 
-div.contact.block-center {
+div.contact {
   width: 85%;
   max-width: 340px;
-  color: #614633;
+
 }
 
 div.contact ul {
@@ -161,31 +166,27 @@ div.contact li {
 }
 
 div.contact span {
-  font-size: 1.7em;
   display: block;
-  padding: 4px 10px;
+  padding: 0 6px;
 }
 
 div.contact span.label {
-  font-size: 1.5em;
+  font-size: 1.2em;
   float: left;
 }
 
 div.contact span.data {
+  font-size: 1.4em;
   float: right;
 }
 
-div.contact button {
+div.contact a.btn {
   color: Bisque;
   background-color: #614633;
   margin-top: 30px;
   width: 100%;
 }
 
-div.button:hover {
-  color: #cccccc;
-  background-color: #614633;
-}
 
 div.skill {
   height: 400px;
@@ -195,11 +196,17 @@ div.skill {
   box-sizing: border-box;
 }
 
-div.skill div.title {
-  color: #614633;
-  font-size: 1.8em;
+ul.skills div.title {
+  font-size: 1.7em;
   font-weight: 600;
-  padding: 5px 0;
-  padding: 15px 25px;
-  border-bottom: 1px solid lightgray;
+  //padding: 5px 0;
+  //padding: 15px 25px;
+}
+
+ul.skills div.collapsible-body {
+  background-color: #fef9ef;
+}
+
+.project-list h4 {
+  text-align: right;
 }

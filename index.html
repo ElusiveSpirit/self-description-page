@@ -2,47 +2,33 @@
 <html>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
   <script src="https://use.fontawesome.com/beededfd57.js"></script>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-  <link rel="stylesheet" href="https://code.getmdl.io/1.2.0/material.indigo-pink.min.css">
 
   <header>
-    <div class="middle-container">
-      <div class="mdl-grid">
-        <div class="mdl-cell mdl-cell--4-col-desktop mdl-cell--12-col">
-            <img alt="User photo" src="http://ucost.ru/uploads/avatar/usr_20574208_D0Aj0m3.jpg">
+    <div class="container">
+      <div class="row">
+        <div class="col s12 l4">
+          <img alt="User photo" src="http://ucost.ru/uploads/avatar/usr_20574208_D0Aj0m3.jpg">
         </div>
-        <div class="mdl-cell mdl-cell--7-col-desktop mdl-cell--hide-tablet mdl-cell--hide-phone">
-          <div class="block-center">
-            <div class="name top mdl-shadow--2dp">
+        <div class="col s12 l7">
+          <div class="container">
+            <div class="name top mdl-shadow--2dp z-depth-1">
               <span>KONSTANTIN MANYAKHIN</span>
             </div>
-            <div class="name bottom mdl-shadow--2dp">
+            <div class="name bottom mdl-shadow--2dp z-depth-1">
               <span>Back-end developer</span>
-            </div>
-          </div>
-        </div>
-        <div class="mdl-cell mdl-cell--12-col mdl-cell--hide-desktop">
-          <div class="block-center">
-            <div class="name mdl-shadow--2dp">
-              <span>KONSTANTIN MANYAKHIN</span>
-            </div>
-            <div class="name mdl-shadow--2dp">
-              <span>Back-end developer</span>
-            </div>
-            <div class="clear">
-
             </div>
           </div>
         </div>
       </div>
     </div>
   </header>
-  <main class="mdl-shadow--24dp">
-    <div class="middle-container">
-      <div class="mdl-grid">
-        <div class="mdl-cell mdl-cell--4-col-desktop mdl-cell--12-col">
-          <div class="links block-center">
+  <main>
+    <div class="container">
+      <div class="row">
+        <div class="col s12 l4">
+          <div class="links container">
             <ul>
               <li>
                 <a href="#">
@@ -61,7 +47,7 @@
               </li>
             </ul>
           </div>
-          <div class="contact block-center">
+          <div class="contact container">
             <ul>
               <li>
                 <span class="label">PHONE</span>
@@ -72,31 +58,147 @@
                 <span class="data">2447785@gmail.com</span>
               </li>
               <li>
-                <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">
-                  Leave a message
-                </button>
+                <a class="waves-effect waves-light btn">Leave a message</a>
               </li>
             </ul>
           </div>
         </div>
-        <div class="mdl-cell mdl-cell--8-col-desktop mdl-cell--12-col">
-          <div class="skill mdl-shadow--2dp">
-            <div class="title">
-              <span>SKILLS</span>
-            </div>
-            <div class="content">
-              <ul>
+        <div class="col s12 l8">
+          <ul class="skills collapsible" data-collapsible="accordion">
+            <li>
+              <div class="title collapsible-header active">SKILLS</div>
+              <div class="collapsible-body">
+                <p>Here are my skills. You can read the descriptions by clicking headers</p>
+              </div>
+            </li>
+            <li>
+              <div class="collapsible-header">Primary - back-end</div>
+              <div class="collapsible-body">
+                <p>Python, Django framework, Tornado</p>
+              </div>
+            </li>
+            <li>
+              <div class="collapsible-header">Also basic front-end</div>
+              <div class="collapsible-body">
+                <p>Lorem ipsum dolor sit amet.</p>
+              </div>
+            </li>
+            <li>
+              <div class="collapsible-header">Mobile ones</div>
+              <div class="collapsible-body">
+                <p>Lorem ipsum dolor sit amet.</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="project-list">
+        <h4 class="">PROJECTS</h4>
 
-              </ul>
+        <div class="row">
+
+          <div class="col s10 m6 l4 offset-s1">
+            <div class="card">
+              <div class="card-image">
+                <img src="https://safeum.com/upload/images/safeumworldnews/2015/safeum_messenger_sidestepper_attack_targets_corporate_ios_managers_ru.png">
+                <span class="card-title">Card Title</span>
+              </div>
+              <div class="card-content">
+                <p>I am a very simple card. I am good at containing bits of information.</p>
+              </div>
             </div>
           </div>
+
+          <div class="col s10 m6 l4 offset-s1">
+            <div class="card">
+              <div class="card-image">
+                <img src="https://safeum.com/upload/images/safeumworldnews/2015/safeum_messenger_sidestepper_attack_targets_corporate_ios_managers_ru.png">
+                <span class="card-title">Card Title</span>
+              </div>
+              <div class="card-content">
+                <p>I am a very simple card. I am good at containing bits of information.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col s10 m6 l4 offset-s1">
+            <div class="card">
+              <div class="card-image">
+                <img src="https://safeum.com/upload/images/safeumworldnews/2015/safeum_messenger_sidestepper_attack_targets_corporate_ios_managers_ru.png">
+                <span class="card-title">Card Title</span>
+              </div>
+              <div class="card-content">
+                <p>I am a very simple card. I am good at containing bits of information.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col s10 m6 l4 offset-s1">
+            <div class="card">
+              <div class="card-image">
+                <img src="https://safeum.com/upload/images/safeumworldnews/2015/safeum_messenger_sidestepper_attack_targets_corporate_ios_managers_ru.png">
+                <span class="card-title">Card Title</span>
+              </div>
+              <div class="card-content">
+                <p>I am a very simple card. I am good at containing bits of information.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col s10 m6 l4 offset-s1">
+            <div class="card">
+              <div class="card-image">
+                <img src="https://safeum.com/upload/images/safeumworldnews/2015/safeum_messenger_sidestepper_attack_targets_corporate_ios_managers_ru.png">
+                <span class="card-title">Card Title</span>
+              </div>
+              <div class="card-content">
+                <p>I am a very simple card. I am good at containing bits of information.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col s10 m6 l4 offset-s1">
+            <div class="card">
+              <div class="card-image">
+                <img src="https://safeum.com/upload/images/safeumworldnews/2015/safeum_messenger_sidestepper_attack_targets_corporate_ios_managers_ru.png">
+                <span class="card-title">Card Title</span>
+              </div>
+              <div class="card-content">
+                <p>I am a very simple card. I am good at containing bits of information.</p>
+              </div>
+            </div>
+          </div>
+
         </div>
       </div>
     </div>
   </main>
   <footer>
-
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text">Footer Content</h5>
+          <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
+        </div>
+        <div class="col l4 offset-l2 s12">
+          <h5 class="white-text">Links</h5>
+          <ul>
+            <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
+            <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
+            <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
+            <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+      © 2014 Copyright Text
+      <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+      </div>
+    </div>
   </footer>
 
-  <script defer src="https://code.getmdl.io/1.2.0/material.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
 </html>
