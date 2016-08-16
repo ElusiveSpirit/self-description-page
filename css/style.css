@@ -1,5 +1,10 @@
-* {
+header, main {
   color: #614633;
+}
+
+body {
+  background-color: Bisque;
+  //#353535
 }
 
 div.middle-container {
@@ -15,6 +20,7 @@ main div.middle-container {
 }
 
 header {
+  min-height: 290px;
   background-color: #bb8773;
   padding-top: 60px;
   padding-bottom: 10px;
@@ -33,12 +39,16 @@ header div.block-center {
   max-width: 80%;
 }
 
-div.name {
+header div.container div.name-wrapper {
+  min-height: 200px;
+}
+
+div.name div {
   width: 100%;
   min-width: 220px;
   text-align: center;
   padding: 7px;
-  margin-top: 20px;
+  margin-top: 15px;
   float: left;
   background-color: white;
   position: relative;
@@ -51,7 +61,7 @@ div.name span {
   font-weight: 400;
 }
 
-div.name.top::before {
+div.name div.top::before {
     content: "";
     display: block;
     width: 0;
@@ -65,7 +75,7 @@ div.name.top::before {
     top: 0;
 }
 
-div.name.top::after {
+div.name div.top::after {
     content: "";
     display: block;
     width: 0;
@@ -79,7 +89,7 @@ div.name.top::after {
     right: -45px;
 }
 
-div.name.bottom::before {
+div.name div.bottom::before {
     content: "";
     display: block;
     width: 0;
@@ -93,7 +103,7 @@ div.name.bottom::before {
     left: -45px;
 }
 
-div.name.bottom::after {
+div.name div.bottom::after {
     content: "";
     display: block;
     width: 0;
@@ -112,20 +122,6 @@ header img {
   height: 200px;
   width: 200px;
   margin: 0 auto;
-  border-radius: 50%;
-}
-
-footer {
-  background-color: #353535;
-}
-
-main {
-  background-color: Bisque;
-}
-
-ul {
-  list-style: none;
-  padding: 0;
 }
 
 div.links {
@@ -180,6 +176,10 @@ div.contact span.data {
   float: right;
 }
 
+div.contact a {
+  color: #614633;
+}
+
 div.contact a.btn {
   color: Bisque;
   background-color: #614633;
@@ -209,4 +209,62 @@ ul.skills div.collapsible-body {
 
 .project-list h4 {
   text-align: right;
+}
+
+/****************** PROJECT DETAIL ******************/
+
+div.project-detail.container {
+  position: relative;
+  top: -200px;
+}
+
+div.project-detail.container div.card-panel {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+div.project-detail h3 {
+  position: relative;
+}
+
+div.project-detail p {
+  font-size: larger;
+  font-weight: 400;
+}
+
+div.project-detail li {
+  font-size: larger;
+  font-weight: 400;
+}
+
+div.project-detail img {
+  display: block;
+  margin: 35px auto 0 auto;
+}
+
+div.project-detail .skills span {
+  font-size: larger;
+
+}
+
+div.project-detail .skills ul {
+  display: inline-block;
+}
+
+div.project-detail .skills li {
+  display: inline-block;
+}
+
+div.floating.fixed-action-btn.horizontal.click-to-toggle {
+  position: fixed;
+  bottom: 45px;
+  right: 24px;
+}
+
+@media screen and (min-width: 993px) {
+  div.floating.fixed-action-btn.horizontal.click-to-toggle {
+    position: absolute !important;
+    right: -36px;
+    bottom: -43px;
+  }
 }

@@ -1,22 +1,31 @@
 <!DOCTYPE html>
 <html>
+  <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css"  media="screen,projection">
   <script src="https://use.fontawesome.com/beededfd57.js"></script>
 
   <header>
     <div class="container">
       <div class="row">
-        <div class="col s12 l4">
-          <img alt="User photo" src="http://ucost.ru/uploads/avatar/usr_20574208_D0Aj0m3.jpg">
+        <div class="col s12 m4 valign-wrapper">
+          <img class="circle valign" alt="User photo" src="http://ucost.ru/uploads/avatar/usr_20574208_D0Aj0m3.jpg">
         </div>
-        <div class="col s12 l7">
-          <div class="container">
-            <div class="name top mdl-shadow--2dp z-depth-1">
+        <div class="col s12 m7 valign-wrapper name-wrapper">
+          <div class="name container valign hide-on-med-and-down">
+            <div class="top mdl-shadow--2dp z-depth-1">
               <span>KONSTANTIN MANYAKHIN</span>
             </div>
-            <div class="name bottom mdl-shadow--2dp z-depth-1">
+            <div class="bottom mdl-shadow--2dp z-depth-1">
+              <span>Back-end developer</span>
+            </div>
+          </div>
+          <div class="name container valign hide-on-large-only">
+            <div class="mdl-shadow--2dp z-depth-1">
+              <span>KONSTANTIN MANYAKHIN</span>
+            </div>
+            <div class="mdl-shadow--2dp z-depth-1">
               <span>Back-end developer</span>
             </div>
           </div>
@@ -31,17 +40,17 @@
           <div class="links container">
             <ul>
               <li>
-                <a href="#">
+                <a href="https://github.com/ElusiveSpirit" target="_blank">
                   <i class="fa fa-github fa-3x" aria-hidden="true"></i>
                 </a>
               </li>
               <li>
-                <a href="#">
+                <a href="https://new.vk.com/konstantinmk" target="_blank">
                   <i class="fa fa-vk fa-3x" aria-hidden="true"></i>
                 </a>
               </li>
               <li>
-                <a href="#">
+                <a href="mailto:2447785@gmail.com?subject=Request an assistance">
                   <i class="fa fa-envelope fa-3x" aria-hidden="true"></i>
                 </a>
               </li>
@@ -55,7 +64,9 @@
               </li>
               <li>
                 <span class="label">EMAIL</span>
-                <span class="data">2447785@gmail.com</span>
+                <a href="mailto:2447785@gmail.com?subject=Request an assistance">
+                  <span class="data">2447785@gmail.com</span>
+                </a>
               </li>
               <li>
                 <a class="waves-effect waves-light btn">Leave a message</a>
@@ -98,7 +109,7 @@
         <div class="row">
 
           <div class="col s10 m6 l4 offset-s1">
-            <div class="card">
+            <div class="card hoverable">
               <div class="card-image">
                 <img src="https://safeum.com/upload/images/safeumworldnews/2015/safeum_messenger_sidestepper_attack_targets_corporate_ios_managers_ru.png">
                 <span class="card-title">Card Title</span>
@@ -110,7 +121,7 @@
           </div>
 
           <div class="col s10 m6 l4 offset-s1">
-            <div class="card">
+            <div class="card hoverable">
               <div class="card-image">
                 <img src="https://safeum.com/upload/images/safeumworldnews/2015/safeum_messenger_sidestepper_attack_targets_corporate_ios_managers_ru.png">
                 <span class="card-title">Card Title</span>
@@ -122,7 +133,7 @@
           </div>
 
           <div class="col s10 m6 l4 offset-s1">
-            <div class="card">
+            <div class="card hoverable">
               <div class="card-image">
                 <img src="https://safeum.com/upload/images/safeumworldnews/2015/safeum_messenger_sidestepper_attack_targets_corporate_ios_managers_ru.png">
                 <span class="card-title">Card Title</span>
@@ -134,7 +145,7 @@
           </div>
 
           <div class="col s10 m6 l4 offset-s1">
-            <div class="card">
+            <div class="card hoverable">
               <div class="card-image">
                 <img src="https://safeum.com/upload/images/safeumworldnews/2015/safeum_messenger_sidestepper_attack_targets_corporate_ios_managers_ru.png">
                 <span class="card-title">Card Title</span>
@@ -146,7 +157,7 @@
           </div>
 
           <div class="col s10 m6 l4 offset-s1">
-            <div class="card">
+            <div class="card hoverable">
               <div class="card-image">
                 <img src="https://safeum.com/upload/images/safeumworldnews/2015/safeum_messenger_sidestepper_attack_targets_corporate_ios_managers_ru.png">
                 <span class="card-title">Card Title</span>
@@ -158,7 +169,7 @@
           </div>
 
           <div class="col s10 m6 l4 offset-s1">
-            <div class="card">
+            <div class="card hoverable">
               <div class="card-image">
                 <img src="https://safeum.com/upload/images/safeumworldnews/2015/safeum_messenger_sidestepper_attack_targets_corporate_ios_managers_ru.png">
                 <span class="card-title">Card Title</span>
@@ -173,7 +184,7 @@
       </div>
     </div>
   </main>
-  <footer>
+  <footer class="page-footer grey darken-2">
     <div class="container">
       <div class="row">
         <div class="col l6 s12">
@@ -193,7 +204,7 @@
     </div>
     <div class="footer-copyright">
       <div class="container">
-      © 2014 Copyright Text
+        Copyright (c) 2016 Manyakhin Konstantin
       <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
       </div>
     </div>
