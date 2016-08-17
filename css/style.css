@@ -219,6 +219,7 @@ div.project-detail.container {
 }
 
 div.project-detail.container div.card-panel {
+  position: relative;
   max-width: 1000px;
   margin: 0 auto;
 }
@@ -255,16 +256,24 @@ div.project-detail .skills li {
   display: inline-block;
 }
 
-div.floating.fixed-action-btn.horizontal.click-to-toggle {
-  position: fixed;
-  bottom: 45px;
-  right: 24px;
+div.floating-block {
+  position: absolute;
+  top: 20px;
+  right: -30px;
 }
 
 @media screen and (min-width: 993px) {
-  div.floating.fixed-action-btn.horizontal.click-to-toggle {
-    position: absolute !important;
-    right: -36px;
-    bottom: -43px;
+  div.floating-block {
+    top: 50px;
+    right: -80px;
   }
+}
+
+
+div.floating-block li {
+  margin: 20px 0;
+}
+
+div.floating-block a i {
+  display: block;
 }
