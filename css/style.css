@@ -213,9 +213,17 @@ ul.skills div.collapsible-body {
 
 /****************** PROJECT DETAIL ******************/
 
+header.project-detail {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
 div.project-detail.container {
   position: relative;
-  top: -200px;
+  margin-top: 140px;
+  margin-bottom: 40px;
 }
 
 div.project-detail.container div.card-panel {
