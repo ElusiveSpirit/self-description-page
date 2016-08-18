@@ -14,18 +14,18 @@
         </div>
         <div class="col s12 m7 valign-wrapper name-wrapper">
           <div class="name container valign hide-on-med-and-down">
-            <div class="top mdl-shadow--2dp z-depth-1">
+            <div class="top z-depth-1">
               <span>KONSTANTIN MANYAKHIN</span>
             </div>
-            <div class="bottom mdl-shadow--2dp z-depth-1">
+            <div class="bottom z-depth-1">
               <span>Back-end developer</span>
             </div>
           </div>
           <div class="name container valign hide-on-large-only">
-            <div class="mdl-shadow--2dp z-depth-1">
+            <div class="z-depth-1">
               <span>KONSTANTIN MANYAKHIN</span>
             </div>
-            <div class="mdl-shadow--2dp z-depth-1">
+            <div class="z-depth-1">
               <span>Back-end developer</span>
             </div>
           </div>
@@ -57,21 +57,40 @@
             </ul>
           </div>
           <div class="contact container">
-            <ul>
-              <li>
-                <span class="label">PHONE</span>
-                <span class="data">+7(903)244-77-85</span>
-              </li>
-              <li>
-                <span class="label">EMAIL</span>
-                <a href="mailto:2447785@gmail.com?subject=Request an assistance">
-                  <span class="data">2447785@gmail.com</span>
-                </a>
-              </li>
-              <li>
-                <a class="waves-effect waves-light btn">Leave a message</a>
-              </li>
-            </ul>
+            <div class="info" style="display: none;">
+              <ul>
+                <li>
+                  <span class="label">PHONE</span>
+                  <span class="data">+7(903)244-77-85</span>
+                </li>
+                <li>
+                  <span class="label">EMAIL</span>
+                  <a href="mailto:2447785@gmail.com?subject=Request an assistance">
+                    <span class="data">2447785@gmail.com</span>
+                  </a>
+                </li>
+                <li>
+                  <a class="waves-effect waves-light btn open">Leave a message</a>
+                </li>
+              </ul>
+            </div>
+            <div class="message-block">
+              <form >
+                <div class="input-field">
+                  <input id="email" type="email" class="validate">
+                  <label for="email" data-error="Wrong email format">Email</label>
+                </div>
+                <div class="input-field">
+                  <textarea id="textarea1" class="materialize-textarea"></textarea>
+                  <label for="textarea1">Textarea</label>
+                </div>
+                <a class="waves-effect waves-light btn send">send</a>
+              </form>
+              <div class="message-success" style="display: none;">
+                Message have been sent
+              </div>
+              <a class="waves-effect waves-light btn-flat close">close</a>
+            </div>
           </div>
         </div>
         <div class="col s12 l8">
@@ -210,5 +229,6 @@
   </footer>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="js/feedback_block.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
 </html>

@@ -180,20 +180,69 @@ div.contact a {
   color: #614633;
 }
 
-div.contact a.btn {
+div.contact a.btn, a.btn-flat {
+  margin-top: 10px;
   color: Bisque;
   background-color: #614633;
-  margin-top: 30px;
   width: 100%;
 }
 
+div.contact a.btn.open {
+  margin-top: 30px;
+}
 
-div.skill {
-  height: 400px;
-  width: 100%;
-  float: left;
-  background: white;
-  box-sizing: border-box;
+div.contact a.btn-flat.close {
+  color: #614633;
+  background-color: Bisque;
+  text-align: center;
+}
+
+div.contact div.message-block form {
+  padding: 0;
+}
+
+div.contact div.message-block div.message-success {
+  padding: 15px;
+  font-size: larger;
+  text-align: center;
+}
+
+ div.contact div.message-block {
+    margin: 10px 0;
+}
+/* label color */
+div.contact div.message-block .input-field label {
+ color: #614633;
+}
+/* label focus color */
+div.contact div.message-block .input-field input[type=email]:focus + label {
+ color: #614633;
+}
+/* label underline focus color */
+div.contact div.message-block .input-field input[type=email]:focus,
+div.contact div.message-block .input-field textarea:focus {
+ border-bottom: 1px solid #614633;
+ box-shadow: 0 1px 0 0 #614633;
+}
+
+div.contact div.message-block .input-field input[type=email]:focus {
+ border-bottom: 1px solid #614633;
+ box-shadow: 0 1px 0 0 #614633;
+}
+
+/* valid color */
+div.contact div.message-block .input-field input[type=email].valid {
+ border-bottom: 1px solid #614633;
+ box-shadow: 0 1px 0 0 #614633;
+}
+/* invalid color */
+div.contact div.message-block .input-field input[type=email].invalid {
+ border-bottom: 1px solid #614633;
+ box-shadow: 0 1px 0 0 #614633;
+}
+/* icon prefix focus color */
+div.contact div.message-block .input-field .prefix.active {
+ color: #614633;
 }
 
 ul.skills div.title {
@@ -222,7 +271,7 @@ header.project-detail {
 
 div.project-detail.container {
   position: relative;
-  margin-top: 140px;
+  margin-top: 80px;
   margin-bottom: 40px;
 }
 
@@ -284,4 +333,8 @@ div.floating-block li {
 
 div.floating-block a i {
   display: block;
+}
+
+div.project-detail a.btn {
+  background-color: #bb8773;
 }
