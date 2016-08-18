@@ -14,7 +14,10 @@ function toggleMessageForm() {
 }
 
 
-$('div.contact.container a.btn.open').add('div.contact.container a.btn-flat.close').click(toggleMessageForm);
+$('div.contact.container a.btn.open').add('div.contact.container a.btn-flat.close').click(function() {
+    toggleMessageForm();
+    $('#email').focus();
+});
 
 $('div.contact.container a.btn.send').click(function() {
     $('div.contact div.message-block form').animate({
@@ -26,5 +29,5 @@ $('div.contact.container a.btn.send').click(function() {
             $('div.contact div.message-block div.message-success').css('display', 'none');
             toggleMessageForm();
         }
-    }, 2000);
+    }, 3000);
 });
