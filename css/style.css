@@ -127,11 +127,12 @@ header img {
 div.links {
   width: 250px;
   padding: 0 30px;
+  margin: 0 auto;
   border-bottom: 1px solid #614633;
 }
 
 div.links ul {
-  width: 250px;
+  width: 200px;
   display: inline-block;
 }
 
@@ -260,6 +261,37 @@ ul.skills div.collapsible-body {
   text-align: right;
 }
 
+div.loading-block {
+  height: 48px;
+}
+
+div.loading-block div.preloader-wrapper,
+div.loading-block a {
+  display: block;
+  margin: 0 auto;
+}
+
+div.loading-block div.preloader-wrapper div.spinner-layer {
+  border-color: #614633;
+}
+
+div.loading-block a {
+  max-width: 250px;
+  background-color: #614633;
+  margin: 0 auto;
+  color: Bisque;
+}
+
+div.loading-block a:hover {
+  background-color: #614633;
+}
+
+div.loading-block span.result {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    font-size: larger;
+}
 /****************** PROJECT DETAIL ******************/
 
 header.project-detail {

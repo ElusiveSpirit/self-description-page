@@ -37,7 +37,7 @@
     <div class="container">
       <div class="row">
         <div class="col s12 l4">
-          <div class="links container">
+          <div class="links">
             <ul>
               <li>
                 <a href="https://github.com/ElusiveSpirit" target="_blank">
@@ -57,7 +57,7 @@
             </ul>
           </div>
           <div class="contact container">
-            <div class="info" style="display: none;">
+            <div class="info">
               <ul>
                 <li>
                   <span class="label">PHONE</span>
@@ -74,7 +74,7 @@
                 </li>
               </ul>
             </div>
-            <div class="message-block">
+            <div class="message-block" style="display: none;">
               <form >
                 <div class="input-field">
                   <input id="email" type="email" class="validate">
@@ -200,6 +200,21 @@
           </div>
 
         </div>
+        <div class="loading-block">
+          <div class="preloader-wrapper active" style="display: none;">
+            <div class="spinner-layer">
+              <div class="circle-clipper left">
+                <div class="circle"></div>
+              </div><div class="gap-patch">
+                <div class="circle"></div>
+              </div><div class="circle-clipper right">
+                <div class="circle"></div>
+              </div>
+            </div>
+          </div>
+          <span class="result" style="display: none;">No more projects</span>
+          <a class="waves-effect waves-light btn">Load more</a>
+        </div>
       </div>
     </div>
   </main>
@@ -230,5 +245,6 @@
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <script src="js/feedback_block.js"></script>
+  <script src="js/load_projects.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
 </html>
