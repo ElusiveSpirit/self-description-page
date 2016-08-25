@@ -2,6 +2,47 @@ from django.db import models
 from django.core.urlresolvers import reverse
 
 
+class Message(models.Model):
+    email = models.CharField(max_length=200)
+    text = models.TextField()
+
+    def __str__(self):
+        return self.email
+
+
+# *******************************************************************
+#                              PROFILE
+# *******************************************************************
+
+class Profile(models.Model):
+    first_name = models.CharField(max_length=100)
+    last_name = models.CharField(max_length=100)
+    avatar = models.ImageField(default='default/project.png', upload_to='avatar')
+
+    @property
+    def full_name(self):
+        return '%s %s ' % (self.first_name, self.last_name)
+
+class Link(models.Model):
+    profile = models.ForeignKey(Profile, related_name='link_list')
+    name = models.CharField(max_length=120)
+    url = models.CharField(max_length=250)
+    icon_class = models.CharField(max_length=20)
+
+
+class SkillDescription(models.Model):
+    profile = models.ForeignKey(Profile, related_name='skill_description_list')
+    title = models.CharField(max_length=120)
+    content = models.TextField()
+
+    def __str__(self):
+        return self.title
+
+
+# *******************************************************************
+#                              PROJECT
+# *******************************************************************
+
 class Skill(models.Model):
     name = models.CharField(max_length=40)
 
@@ -34,6 +75,7 @@ class BlockOfSkill(models.Model):
 
     def __str__(self):
         return ', '.join([ str(s) for s in self.skill_list.all() ])
+
 
 class Picture(models.Model):
     project = models.ForeignKey(Project, related_name='pic_list')

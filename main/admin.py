@@ -1,14 +1,23 @@
 from django.contrib import admin
 
-from .models import Skill, Project, BlockOfSkill, Picture
+from .models import (Skill, Project, BlockOfSkill, Picture, Message, Profile,
+                     Link, SkillDescription)
 
 
+class LinkAdmin(admin.StackedInline):
+    model = Link
+    extra = 0
 
-from django.contrib.auth.admin import UserAdmin
-from django.contrib.auth.models import User
-from django.contrib.auth.forms import ReadOnlyPasswordHashField
-from django.contrib.auth.forms import UserChangeForm
-from django.utils.translation import ugettext_lazy as _
+class SkillDescriptionlAdmin(admin.StackedInline):
+    model = SkillDescription
+    extra = 0
+
+@admin.register(Profile)
+class ProfileAdmin(admin.ModelAdmin):
+    inlines = [
+        LinkAdmin,
+        SkillDescriptionlAdmin
+    ]
 
 
 class PictureAdmin(admin.StackedInline):
@@ -26,6 +35,5 @@ class ProjectAdmin(admin.ModelAdmin):
         BlockOfSkillAdmin
     ]
 
-admin.site.register(Skill)
-admin.site.register(BlockOfSkill)
-admin.site.register(Picture)
+admin.site.register(Link)
+admin.site.register(SkillDescription)

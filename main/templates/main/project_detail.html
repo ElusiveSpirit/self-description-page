@@ -18,7 +18,9 @@
       <div class="card-panel white">
         <h3>{{ project.title }}</h3>
         <div class="divider"></div>
+        {% autoescape off %}
         <p>{{ project.body }}</p>
+        {% endautoescape%} 
         {% if project.block_skill_list %}
         <blockquote>
           <ul>

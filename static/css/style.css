@@ -61,60 +61,67 @@ div.name span {
   font-weight: 400;
 }
 
-div.name div.top::before {
-    content: "";
-    display: block;
-    width: 0;
-    height: 0;
-    border-top: 50px solid white;
-    border-right: 50px solid transparent;
-    border-left: 45px solid transparent;
-    z-index: 0;
-    position: absolute;
-    left: -45px;
-    top: 0;
+
+@media screen and (min-width: 993px) {
+  div.name div.top::before {
+      content: "";
+      display: block;
+      width: 0;
+      height: 0;
+      border-top: 50px solid white;
+      border-right: 50px solid transparent;
+      border-left: 45px solid transparent;
+      z-index: 0;
+      position: absolute;
+      left: -45px;
+      top: 0;
+  }
+
+  div.name div.top::after {
+      content: "";
+      display: block;
+      width: 0;
+      height: 0;
+      border-bottom: 50px solid white;
+      border-right: 45px solid transparent;
+      border-left: 50px solid transparent;
+      z-index: 0;
+      position: absolute;
+      top: 0;
+      right: -45px;
+  }
+
+  div.name div.bottom::before {
+      content: "";
+      display: block;
+      width: 0;
+      height: 0;
+      border-bottom: 50px solid white;
+      border-right: 50px solid transparent;
+      border-left: 45px solid transparent;
+      z-index: 0;
+      position: absolute;
+      top: 0;
+      left: -45px;
+  }
+
+  div.name div.bottom::after {
+      content: "";
+      display: block;
+      width: 0;
+      height: 0;
+      border-top: 50px solid white;
+      border-right: 45px solid transparent;
+      border-left: 50px solid transparent;
+      z-index: 0;
+      position: absolute;
+      top: 0;
+      right: -45px;
+  }
 }
 
-div.name div.top::after {
-    content: "";
-    display: block;
-    width: 0;
-    height: 0;
-    border-bottom: 50px solid white;
-    border-right: 45px solid transparent;
-    border-left: 50px solid transparent;
-    z-index: 0;
-    position: absolute;
-    top: 0;
-    right: -45px;
-}
-
-div.name div.bottom::before {
-    content: "";
-    display: block;
-    width: 0;
-    height: 0;
-    border-bottom: 50px solid white;
-    border-right: 50px solid transparent;
-    border-left: 45px solid transparent;
-    z-index: 0;
-    position: absolute;
-    top: 0;
-    left: -45px;
-}
-
-div.name div.bottom::after {
-    content: "";
-    display: block;
-    width: 0;
-    height: 0;
-    border-top: 50px solid white;
-    border-right: 45px solid transparent;
-    border-left: 50px solid transparent;
-    z-index: 0;
-    position: absolute;
-    top: 0;
-    right: -45px;
+div.skill-list-content {
+  padding: 20px;
 }
 
 header img {

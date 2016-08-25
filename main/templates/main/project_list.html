@@ -10,22 +10,14 @@
   <div class="container">
     <div class="row">
       <div class="col s12 m4 valign-wrapper">
-        <img class="circle valign" alt="User photo" src="http://ucost.ru/uploads/avatar/usr_20574208_D0Aj0m3.jpg">
+        <img class="circle valign" alt="User photo" src="{{ profile.avatar.url }}">
       </div>
       <div class="col s12 m7 valign-wrapper name-wrapper">
-        <div class="name container valign hide-on-med-and-down">
+        <div class="name container valign">
           <div class="top z-depth-1">
-            <span>KONSTANTIN MANYAKHIN</span>
+            <span>{{ profile.full_name }}</span>
           </div>
           <div class="bottom z-depth-1">
-            <span>Back-end developer</span>
-          </div>
-        </div>
-        <div class="name container valign hide-on-large-only">
-          <div class="z-depth-1">
-            <span>KONSTANTIN MANYAKHIN</span>
-          </div>
-          <div class="z-depth-1">
             <span>Back-end developer</span>
           </div>
         </div>
@@ -42,38 +34,30 @@
     <div class="col s12 l4">
       <div class="links">
         <ul>
-          <li>
-            <a href="https://github.com/ElusiveSpirit" target="_blank">
-              <i class="fa fa-github fa-3x" aria-hidden="true"></i>
-            </a>
-          </li>
-          <li>
-            <a href="https://new.vk.com/konstantinmk" target="_blank">
-              <i class="fa fa-vk fa-3x" aria-hidden="true"></i>
-            </a>
-          </li>
-          <li>
-            <a href="mailto:2447785@gmail.com?subject=Request an assistance">
-              <i class="fa  fa-skype fa-3x" aria-hidden="true"></i>
-            </a>
-          </li>
+        {% for link in profile.link_list.all %}
+        <li>
+          <a href="{{ link.url }}" target="_blank">
+            <i class="fa {{ link.icon_class }} fa-3x" aria-hidden="true"></i>
+          </a>
+        </li>
+        {% endfor %}
         </ul>
       </div>
       <div class="contact container">
         <div class="info">
           <ul>
             <li>
-              <span class="label">PHONE</span>
+              <span class="label">ТЕЛЕФОН</span>
               <span class="data">+7(903)244-77-85</span>
             </li>
             <li>
-              <span class="label">EMAIL</span>
+              <span class="label">ПОЧТА</span>
               <a href="mailto:2447785@gmail.com?subject=Request an assistance">
                 <span class="data">2447785@gmail.com</span>
               </a>
             </li>
             <li>
-              <a class="waves-effect waves-light btn open">Leave a message</a>
+              <a class="waves-effect waves-light btn open">оставить сообщение</a>
             </li>
           </ul>
         </div>
@@ -85,43 +69,42 @@
             </div>
             <div class="input-field">
               <textarea id="textarea1" class="materialize-textarea"></textarea>
-              <label for="textarea1">Textarea</label>
+              <label for="textarea1">Сообщение</label>
             </div>
-            <a class="waves-effect waves-light btn send">send</a>
+            <a class="waves-effect waves-light btn send">Отправить</a>
           </form>
           <div class="message-success" style="display: none;">
-            Message have been sent
+            Сообщение было отправлено
           </div>
-          <a class="waves-effect waves-light btn-flat close">close</a>
+          <a class="waves-effect waves-light btn-flat close">Закрыть</a>
         </div>
       </div>
     </div>
     <div class="col s12 l8">
       <ul class="skills collapsible" data-collapsible="accordion">
         <li>
-          <div class="title collapsible-header active">SKILLS</div>
+          <div class="title collapsible-header active">НАВЫКИ</div>
           <div class="collapsible-body">
+            {% comment %}
             <p>Here are my skills. You can read the descriptions by clicking headers</p>
+            {% endcomment %}
+            <p>
+              Здесь описаны мои навыки. Вы можете прочитать описания, нажимая на заголовки
+            </p>
           </div>
         </li>
+        {% for list in profile.skill_description_list.all %}
         <li>
-          <div class="collapsible-header">Primary - back-end</div>
+          <div class="collapsible-header">{{ list.title }}</div>
           <div class="collapsible-body">
-            <p>Python, Django framework, Tornado</p>
+            {% autoescape off %}
+            <div class="skill-list-content">
+              {{ list.content }}
+            </div>
+            {% endautoescape %}
           </div>
         </li>
-        <li>
-          <div class="collapsible-header">Also basic front-end</div>
-          <div class="collapsible-body">
-            <p>Lorem ipsum dolor sit amet.</p>
-          </div>
-        </li>
-        <li>
-          <div class="collapsible-header">Mobile ones</div>
-          <div class="collapsible-body">
-            <p>Lorem ipsum dolor sit amet.</p>
-          </div>
-        </li>
+        {% endfor %}
       </ul>
     </div>
   </div>

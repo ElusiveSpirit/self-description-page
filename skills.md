@@ -46,3 +46,12 @@ Desktop/server
   - bash, Ubuntu, Arch
 
 Пишу кроссплатформенные приложения для пк и posix-совместимые консольные утилиты  
+
+<blockquote>
+  <ul>
+     <li></li>
+     <li></li>
+     <li></li>
+     <li></li>
+  </ul>
+</blockquote>
