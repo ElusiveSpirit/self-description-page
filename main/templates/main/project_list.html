@@ -1,0 +1,160 @@
+{% extends 'main/base.html' %}
+
+{% block extra_js %}
+  <script src="js/feedback_block.js"></script>
+  <script src="js/load_projects.js"></script>
+{% endblock %}
+
+{% block header %}
+<header>
+  <div class="container">
+    <div class="row">
+      <div class="col s12 m4 valign-wrapper">
+        <img class="circle valign" alt="User photo" src="http://ucost.ru/uploads/avatar/usr_20574208_D0Aj0m3.jpg">
+      </div>
+      <div class="col s12 m7 valign-wrapper name-wrapper">
+        <div class="name container valign hide-on-med-and-down">
+          <div class="top z-depth-1">
+            <span>KONSTANTIN MANYAKHIN</span>
+          </div>
+          <div class="bottom z-depth-1">
+            <span>Back-end developer</span>
+          </div>
+        </div>
+        <div class="name container valign hide-on-large-only">
+          <div class="z-depth-1">
+            <span>KONSTANTIN MANYAKHIN</span>
+          </div>
+          <div class="z-depth-1">
+            <span>Back-end developer</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+{% endblock %}
+
+{% block main %}
+<main>
+<div class="container">
+  <div class="row">
+    <div class="col s12 l4">
+      <div class="links">
+        <ul>
+          <li>
+            <a href="https://github.com/ElusiveSpirit" target="_blank">
+              <i class="fa fa-github fa-3x" aria-hidden="true"></i>
+            </a>
+          </li>
+          <li>
+            <a href="https://new.vk.com/konstantinmk" target="_blank">
+              <i class="fa fa-vk fa-3x" aria-hidden="true"></i>
+            </a>
+          </li>
+          <li>
+            <a href="mailto:2447785@gmail.com?subject=Request an assistance">
+              <i class="fa  fa-skype fa-3x" aria-hidden="true"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="contact container">
+        <div class="info">
+          <ul>
+            <li>
+              <span class="label">PHONE</span>
+              <span class="data">+7(903)244-77-85</span>
+            </li>
+            <li>
+              <span class="label">EMAIL</span>
+              <a href="mailto:2447785@gmail.com?subject=Request an assistance">
+                <span class="data">2447785@gmail.com</span>
+              </a>
+            </li>
+            <li>
+              <a class="waves-effect waves-light btn open">Leave a message</a>
+            </li>
+          </ul>
+        </div>
+        <div class="message-block" style="display: none;">
+          <form >
+            <div class="input-field">
+              <input id="email" type="email" class="validate">
+              <label for="email" data-error="Wrong email format">Email</label>
+            </div>
+            <div class="input-field">
+              <textarea id="textarea1" class="materialize-textarea"></textarea>
+              <label for="textarea1">Textarea</label>
+            </div>
+            <a class="waves-effect waves-light btn send">send</a>
+          </form>
+          <div class="message-success" style="display: none;">
+            Message have been sent
+          </div>
+          <a class="waves-effect waves-light btn-flat close">close</a>
+        </div>
+      </div>
+    </div>
+    <div class="col s12 l8">
+      <ul class="skills collapsible" data-collapsible="accordion">
+        <li>
+          <div class="title collapsible-header active">SKILLS</div>
+          <div class="collapsible-body">
+            <p>Here are my skills. You can read the descriptions by clicking headers</p>
+          </div>
+        </li>
+        <li>
+          <div class="collapsible-header">Primary - back-end</div>
+          <div class="collapsible-body">
+            <p>Python, Django framework, Tornado</p>
+          </div>
+        </li>
+        <li>
+          <div class="collapsible-header">Also basic front-end</div>
+          <div class="collapsible-body">
+            <p>Lorem ipsum dolor sit amet.</p>
+          </div>
+        </li>
+        <li>
+          <div class="collapsible-header">Mobile ones</div>
+          <div class="collapsible-body">
+            <p>Lorem ipsum dolor sit amet.</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="project-list">
+    <h4 class="">PROJECTS</h4>
+
+    <div class="row">
+      {% for project in project_list %}
+      <section class="project-card" id="{{ project.slug }}">
+        <a href="{% url 'main:project-detail' project.slug %}" target="_blank">
+          <div class="col s10 m6 l4 offset-s1">
+            <div class="card hoverable">
+              <div class="card-image">
+                <img src="{{ project.picture.url }}">
+                <span class="card-title">Card Title</span>
+              </div>
+              <div class="card-content">
+                <p>{{ project.title }}</p>
+              </div>
+            </div>
+          </div>
+        </a>
+      </section>
+      {% empty %}
+      <span class="result">No more projects</span>
+      {% endfor %}
+    </div>
+    <div class="loading-block">
+      <span class="result" style="display: none;">No more projects</span>
+      <a class="waves-effect waves-light btn">Load more</a>
+
+    </div>
+  </div>
+</div>
+</main>
+{% endblock %}

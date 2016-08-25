@@ -1,0 +1,88 @@
+{% extends 'main/base.html' %}
+
+{% block extra_css %}
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+{% endblock %}
+
+{% block extra_js %}
+<script src="/js/floating_block.js"></script>
+{% endblock %}
+
+{% block header %}
+  <header class="project-detail"></header>
+{% endblock %}
+
+{% block main %}
+  <main>
+    <div class="project-detail container">
+      <div class="card-panel white">
+        <h3>{{ project.title }}</h3>
+        <div class="divider"></div>
+        <p>{{ project.body }}</p>
+        {% if project.block_skill_list %}
+        <blockquote>
+          <ul>
+            {% for skill in project.block_skill_list.all %}
+            <li>{{ skill }}</li>
+            {% endfor %}
+          </ul>
+        </blockquote>
+        {% endif %}
+        <div class="divider"></div>
+        <div class="">
+          {% for pic in project.pic_list.all %}
+          <section>
+            <img class="z-depth-1 responsive-img" src="{{ pic.pic.url }}" alt="" />
+            <p class="center-align">{{ pic.title }}</p>
+          </section>
+          {% endfor %}
+        </div>
+        <div class="divider"></div>
+        {% if project.skill_list %}
+        <div class="skills">
+          <span>Skills: </span>
+          <ul>
+            {% for skill in project.skill_list.all %}
+            <li><div class="chip">{{ skill }}</div></li>
+            {% endfor %}
+          </ul>
+        </div>
+        {% endif %}
+        <a class="waves-effect waves-light btn right" href="{% url 'main:index' %}#{{ project.slug }}"><i class="material-icons left">arrow_back</i>Back</a>
+        <div class="clear"></div>
+
+        <div class="hide-on-small-only floating-block">
+          <ul>
+            <li><a class="btn-floating btn-large waves-effect waves-light grey lighten-1" href="{% url 'main:index' %}#{{ project.slug }}"><i class="material-icons">arrow_back</i></a></li>
+            <li><a class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">share</i></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </main>
+{% endblock %}
+
+{% block extra_html %}
+  <div class="hide-on-med-and-up fixed-action-btn horizontal click-to-toggle">
+    <a class="btn-floating btn-large red">
+      <i class="material-icons">menu</i>
+    </a>
+    <ul>
+      <li>
+        <a class="btn-floating blue tooltipped" data-position="top" data-delay="50" data-tooltip="Back to main page" href="{% url 'main:index' %}#{{ project.slug }}">
+          <i class="material-icons">arrow_back</i>
+        </a>
+      </li>
+      <li>
+        <a class="btn-floating red tooltipped" data-position="top" data-delay="50" data-tooltip="Copy url">
+          <i class="material-icons">content_copy</i>
+        </a>
+      </li>
+      <li>
+        <a class="btn-floating yellow darken-1  tooltipped" data-position="top" data-delay="50" data-tooltip="Share page">
+          <i class="material-icons">share</i>
+        </a>
+      </li>
+    </ul>
+  </div>
+{% endblock %}

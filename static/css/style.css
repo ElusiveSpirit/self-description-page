@@ -261,6 +261,11 @@ ul.skills div.collapsible-body {
   text-align: right;
 }
 
+.project-list .card .card-content p {
+  color: #614633;
+
+}
+
 div.loading-block {
   height: 48px;
 }

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% block title %}Konstantin Manyakhin - developer{% endblock %}</title>
+  <link rel="stylesheet" href="/css/style.css">
+  {% block extra_css %}{% endblock %}
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css"  media="screen,projection">
+  <script src="https://use.fontawesome.com/beededfd57.js"></script>
+
+  {% block header %}
+    <header>
+    </header>
+  {% endblock %}
+  {% block main %}
+  {% endblock %}
+  {% block footer %}
+  <footer class="page-footer grey darken-2">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text">Konstantin Manyakhin</h5>
+          <p class="grey-text text-lighten-4">Good support for your team or main developer for your middle and little project</p>
+        </div>
+        <div class="col l4 offset-l2 s12">
+          <h5 class="white-text">Contact info</h5>
+          <ul>
+            <li><span class="grey-text text-lighten-3">+7(903)244-77-85</span></li>
+            <li><span class="grey-text text-lighten-3">2447785@gmail.com</span></li>
+            <li><a class="grey-text text-lighten-3" href="#!">Skype</a></li>
+            <li><a class="grey-text text-lighten-3" href="#!">Leave message</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+        Copyright (c) 2016 Manyakhin Konstantin
+      </div>
+    </div>
+  </footer>
+  {% endblock %}
+
+  {% block extra_html %}{% endblock %}
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
+  {% block extra_js %}{% endblock %}
+</html>
