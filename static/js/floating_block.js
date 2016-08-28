@@ -17,3 +17,24 @@ $(window).resize(function() {
     $(floating).css('position', 'fixed');
 
 })
+
+
+function copy_url() {
+    var inp = document.getElementById('url_copy');
+
+    // is element selectable?
+    if (inp && inp.select) {
+      // select text
+        inp.select();
+
+        try {
+            // copy text
+            document.execCommand('copy');
+            inp.blur();
+            Materialize.toast('Link has been copied', 3000)
+        }
+        catch (err) {
+            alert('please press Ctrl/Cmd+C to copy');
+        }
+    }
+}

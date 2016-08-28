@@ -19,15 +19,57 @@ $('div.contact.container a.btn.open').add('div.contact.container a.btn-flat.clos
     $('#email').focus();
 });
 
+
+$('#text').focus(function() {
+    $(this).removeClass('invalid');
+});
+
+
 $('div.contact.container a.btn.send').click(function() {
+
+    if ($('#email').val().length == 0) {
+        $('#email').addClass('invalid');
+    }
+
+    if ($('#text').val().length == 0) {
+        $('#text').addClass('invalid');
+    }
+
+    if ($('#text').hasClass('invalid') ||
+            $('#email').hasClass('invalid')) {
+        return;
+    }
+    var data = {
+        'email': $('#email').val(),
+        'text': $('#text').val(),
+        'csrfmiddlewaretoken': $('input[name="csrfmiddlewaretoken"]').val(),
+    };
+
     $('div.contact div.message-block form').animate({
         height: 'toggle'
     });
-    $('div.contact div.message-block div.message-success').show();
-    setTimeout(function() {
-        if ($('div.contact div.message-block div.message-success').css('display') != 'none') {
-            $('div.contact div.message-block div.message-success').css('display', 'none');
-            toggleMessageForm();
+    $.ajax({
+        type: 'POST',
+        url: '/send_message/',
+        data: data,
+        success: function(data) {
+          console.log(data);
+            if (data.status == 'ok') {
+                $('div.contact div.message-block div.message-success').show();
+                setTimeout(function() {
+                    if ($('div.contact div.message-block div.message-success').css('display') != 'none') {
+                        $('div.contact div.message-block div.message-success').css('display', 'none');
+                        toggleMessageForm();
+                    }
+                }, 3000);
+            } else if (data.code = 501) {
+                errors = JSON.parse(data.errors)
+                console.log(errors.email);
+            }
+        },
+        error: function(e) {
+
         }
-    }, 3000);
+    });
+
 });

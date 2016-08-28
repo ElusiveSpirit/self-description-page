@@ -238,16 +238,24 @@ div.contact div.message-block .input-field input[type=email]:focus {
  box-shadow: 0 1px 0 0 #614633;
 }
 
+#text_label::after {
+  margin-top: 15px;
+}
+
 /* valid color */
+/*
 div.contact div.message-block .input-field input[type=email].valid {
  border-bottom: 1px solid #614633;
  box-shadow: 0 1px 0 0 #614633;
 }
+*/
 /* invalid color */
+/*
 div.contact div.message-block .input-field input[type=email].invalid {
  border-bottom: 1px solid #614633;
  box-shadow: 0 1px 0 0 #614633;
 }
+*/
 /* icon prefix focus color */
 div.contact div.message-block .input-field .prefix.active {
  color: #614633;
@@ -381,4 +389,17 @@ div.floating-block a i {
 
 div.project-detail a.btn {
   background-color: #bb8773;
+  margin-top: 20px;
+}
+
+div.card-panel input.left {
+  margin-bottom: 10px;
+}
+
+@media screen and (min-width: 603px) {
+  div.card-panel input.left {
+    margin-bottom: 10px;
+    width: 60%;
+  }
+
 }

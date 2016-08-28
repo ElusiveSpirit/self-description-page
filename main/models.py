@@ -3,7 +3,7 @@ from django.core.urlresolvers import reverse
 
 
 class Message(models.Model):
-    email = models.CharField(max_length=200)
+    email = models.EmailField()
     text = models.TextField()
 
     def __str__(self):

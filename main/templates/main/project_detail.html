@@ -20,7 +20,7 @@
         <div class="divider"></div>
         {% autoescape off %}
         <p>{{ project.body }}</p>
-        {% endautoescape%} 
+        {% endautoescape%}
         {% if project.block_skill_list %}
         <blockquote>
           <ul>
@@ -50,13 +50,14 @@
           </ul>
         </div>
         {% endif %}
-        <a class="waves-effect waves-light btn right" href="{% url 'main:index' %}#{{ project.slug }}"><i class="material-icons left">arrow_back</i>Back</a>
+        <input type="text" value="http://{{ request.get_host }}{{ request.path }}" id="url_copy" class="left" onclick="this.setSelectionRange(0, this.value.length)" />
+        <a class="waves-effect waves-light btn right" href="{% url 'main:index' %}#{{ project.slug }}"><i class="material-icons left">arrow_back</i>Назад</a>
         <div class="clear"></div>
 
         <div class="hide-on-small-only floating-block">
           <ul>
             <li><a class="btn-floating btn-large waves-effect waves-light grey lighten-1" href="{% url 'main:index' %}#{{ project.slug }}"><i class="material-icons">arrow_back</i></a></li>
-            <li><a class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">share</i></a></li>
+            <li><a class="btn-floating btn-large waves-effect waves-light red" onclick="copy_url()"><i class="material-icons">content_copy</i></a></li>
           </ul>
         </div>
       </div>
@@ -76,13 +77,8 @@
         </a>
       </li>
       <li>
-        <a class="btn-floating red tooltipped" data-position="top" data-delay="50" data-tooltip="Copy url">
+        <a class="btn-floating red tooltipped" data-position="top" data-delay="50" data-tooltip="Copy url" onclick="copy_url()">
           <i class="material-icons">content_copy</i>
-        </a>
-      </li>
-      <li>
-        <a class="btn-floating yellow darken-1  tooltipped" data-position="top" data-delay="50" data-tooltip="Share page">
-          <i class="material-icons">share</i>
         </a>
       </li>
     </ul>

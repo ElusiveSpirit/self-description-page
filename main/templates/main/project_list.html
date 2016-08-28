@@ -62,14 +62,15 @@
           </ul>
         </div>
         <div class="message-block" style="display: none;">
-          <form >
+          <form id="send_message">
+            {% csrf_token %}
             <div class="input-field">
               <input id="email" type="email" class="validate">
-              <label for="email" data-error="Wrong email format">Email</label>
+              <label for="email" data-error="Неправильный формат email">Email</label>
             </div>
             <div class="input-field">
-              <textarea id="textarea1" class="materialize-textarea"></textarea>
-              <label for="textarea1">Сообщение</label>
+              <textarea id="text" class="materialize-textarea validate"></textarea>
+              <label id='text_label' for="text" data-error='Поле не может быть пустым'>Сообщение</label>
             </div>
             <a class="waves-effect waves-light btn send">Отправить</a>
           </form>
@@ -89,7 +90,7 @@
             <p>Here are my skills. You can read the descriptions by clicking headers</p>
             {% endcomment %}
             <p>
-              Здесь описаны мои навыки. Вы можете прочитать описания, нажимая на заголовки
+              Ниже можете прочитать описания моих навыков, нажимая на заголовки
             </p>
           </div>
         </li>
