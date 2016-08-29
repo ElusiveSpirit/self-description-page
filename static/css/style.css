@@ -285,13 +285,13 @@ div.loading-block {
   height: 48px;
 }
 
-div.loading-block div.preloader-wrapper,
+div.preloader-wrapper,
 div.loading-block a {
   display: block;
   margin: 0 auto;
 }
 
-div.loading-block div.preloader-wrapper div.spinner-layer {
+div.preloader-wrapper div.spinner-layer {
   border-color: #614633;
 }
 

@@ -10,6 +10,15 @@ class MessageForm(forms.ModelForm):
     class Meta:
         model = Message
         fields = ['email', 'text']
+        error_messages = {
+            'email': {
+                'required': "Необходимо ввести email",
+                'invalid': "Введите корректный email",
+            },
+            'text': {
+                'required': "Необходимо ввести текст",
+            },
+        }
 
     def save(self):
         msg = super(MessageForm, self).save()

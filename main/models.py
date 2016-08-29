@@ -26,6 +26,10 @@ class Profile(models.Model):
     def full_name(self):
         return '%s %s ' % (self.first_name, self.last_name)
 
+    def __str__(self):
+        return self.full_name
+
+
 class Link(models.Model):
     profile = models.ForeignKey(Profile, related_name='link_list')
     name = models.CharField(max_length=120)
@@ -77,7 +81,7 @@ class BlockOfSkill(models.Model):
     skill_list = models.ManyToManyField(Skill)
 
     def __str__(self):
-        return ', '.join([ str(s) for s in self.skill_list.all() ])
+        return ', '.join([str(s) for s in self.skill_list.all()])
 
 
 class Picture(models.Model):
