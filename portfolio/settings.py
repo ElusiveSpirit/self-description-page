@@ -117,10 +117,19 @@ USE_TZ = True
 
 
 # Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/1.9/howto/static-files/
-
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, "static/")
 
 MEDIA_ROOT = os.path.join(BASE_DIR, "uploads/")
 MEDIA_URL = '/uploads/'
+
+
+# Mailing settings (MAIL.RU gaps)
+#EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_BACKEND = 'django_smtp_ssl.SSLEmailBackend'  # pip install django_smtp_ssl
+EMAIL_USE_SSL = True
+EMAIL_PORT = 465
+EMAIL_HOST = 'smtp.mail.ru'
+EMAIL_HOST_USER = "eragon99@bk.ru"
+EMAIL_HOST_PASSWORD = "zxcvasdf1234"
+DEFAULT_FROM_EMAIL = EMAIL_HOST_USER

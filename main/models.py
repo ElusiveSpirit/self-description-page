@@ -17,7 +17,10 @@ class Message(models.Model):
 class Profile(models.Model):
     first_name = models.CharField(max_length=100)
     last_name = models.CharField(max_length=100)
+    email = models.EmailField()
     avatar = models.ImageField(default='default/project.png', upload_to='avatar')
+
+    send_email_messages = models.BooleanField(blank=True, default=True)
 
     @property
     def full_name(self):
