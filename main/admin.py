@@ -38,3 +38,5 @@ class ProjectAdmin(admin.ModelAdmin):
 admin.site.register(Link)
 admin.site.register(Message)
 admin.site.register(SkillDescription)
+admin.site.register(Skill)
+admin.site.register(BlockOfSkill)

@@ -101,7 +101,7 @@
             <p>Here are my skills. You can read the descriptions by clicking headers</p>
             {% endcomment %}
             <p>
-              Ниже можете прочитать описания моих навыков, нажимая на заголовки
+              Ниже вы можете прочитать описания моих навыков, нажимая на заголовки
             </p>
           </div>
         </li>
@@ -121,7 +121,7 @@
     </div>
   </div>
   <div class="project-list">
-    <h4 class="">PROJECTS</h4>
+    <h4 class="">ПРОЕКТЫ</h4>
 
     <div class="row">
       {% for project in project_list %}
@@ -131,7 +131,6 @@
             <div class="card hoverable">
               <div class="card-image">
                 <img src="{{ project.picture.url }}">
-                <span class="card-title">Card Title</span>
               </div>
               <div class="card-content">
                 <p>{{ project.title }}</p>
@@ -140,13 +139,11 @@
           </div>
         </a>
       </section>
-      {% empty %}
-      <span class="result">No more projects</span>
       {% endfor %}
     </div>
     <div class="loading-block">
-      <span class="result" style="display: none;">No more projects</span>
-      <a class="waves-effect waves-light btn">Load more</a>
+      <span class="result" style="display: none;">Это все проекты</span>
+      <a class="waves-effect waves-light btn">Загрузить ещё</a>
       <div class="preloader-wrapper active" style="display:none;">
         <div class="spinner-layer spinner-red-only">
           <div class="circle-clipper left">
