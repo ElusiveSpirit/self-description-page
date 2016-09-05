@@ -281,6 +281,24 @@ ul.skills div.collapsible-body {
 
 }
 
+div.project-list div.card-image {
+  position: relative;
+  height: 0;
+  padding-top: 56.25%;
+}
+
+div.project-list div.card-image img {
+  position: absolute;
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+
 div.loading-block {
   height: 48px;
 }
@@ -350,6 +368,7 @@ div.project-detail li {
 div.project-detail img {
   display: block;
   margin: 35px auto 0 auto;
+  max-height: 500px;
 }
 
 div.project-detail .skills span {
